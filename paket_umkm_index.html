@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WEBUILDER ID - Jasa Pembuatan Website untuk UMKM dan Perusahaan">
+    <title>Paket UMKM - WEBUILDER ID</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, rgb(255, 153, 0), rgb(206, 82, 255), rgb(16, 190, 0));
+            background-size: 400% 400%;
+            animation: gradientFade 10s infinite alternate ease-in-out;
+            color: white;
+            padding-top: 20px;
+        }
+
+        @keyframes gradientFade {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .package-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .package-description {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .package-benefits {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .package-benefits li {
+            margin-bottom: 5px;
+        }
+
+        .price-button {
+            background: linear-gradient(90deg, #FFA500, #9B30FF);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .price-button:hover {
+            background: linear-gradient(90deg, #FF4500, #6A0DAD);
+            color: black;
+        }
+
+        .row > div {
+            display: flex;
+        }
+
+        /* Back button styles */
+        .back-button {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .back-button span {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+
+        .back-button:hover {
+            color: #FFA500;
+        }
+
+        .step-number {
+        background: linear-gradient(135deg, #6A11CB, #2575FC);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .list-item {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+    }
+
+    .list-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .list-item h5 {
+        color: #FFF;
+    }
+
+    .list-item p {
+        color: #DDD;
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-button" onclick="goBack()">
+    <span>&lt;</span> Back
+</button>
+
+<div class="container">
+    <h2 class="text-center mb-5">Pilih Paket UMKM Anda</h2>
+    <div class="row g-4">
+        <!-- Paket 1 -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Paket Basic</h3>
+                <p class="package-description">Cocok untuk UMKM pemula yang baru memulai perjalanan digital.</p>
+                <ul class="package-benefits">
+                    <li>1 Halaman Website</li>
+                    <li>Desain Responsive</li>
+                    <li>Hosting 1 Tahun</li>
+                </ul>
+                <!-- Mengarahkan ke login.php -->
+                <button class="price-button" onclick="window.location.href='request.php'">Rp 1.000.000</button>
+            </div>
+        </div>
+
+        <!-- Paket 2 -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Paket Standard</h3>
+                <p class="package-description">Pilihan terbaik untuk UMKM yang ingin lebih berkembang.</p>
+                <ul class="package-benefits">
+                    <li>5 Halaman Website</li>
+                    <li>Desain Profesional</li>
+                    <li>Domain & Hosting 1 Tahun</li>
+                    <li>SEO Basic</li>
+                </ul>
+                <!-- Mengarahkan ke login.php -->
+                <button class="price-button" onclick="window.location.href='request.php'">Rp 3.000.000</button>
+            </div>
+        </div>
+
+        <!-- Paket 3 -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Paket Premium</h3>
+                <p class="package-description">Solusi lengkap untuk UMKM yang ingin profesional.</p>
+                <ul class="package-benefits">
+                    <li>10 Halaman Website</li>
+                    <li>Desain Kustom</li>
+                    <li>Domain & Hosting 2 Tahun</li>
+                    <li>SEO Advanced</li>
+                    <li>Google Ads Campaign</li>
+                </ul>
+                <!-- Mengarahkan ke login.php -->
+                <button class="price-button" onclick="window.location.href='request.php'">Rp 5.000.000</button>
+            </div>
+        </div>
+
+        <!-- Paket 4 -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Paket Exclusive</h3>
+                <p class="package-description">Paket istimewa untuk UMKM yang ingin unggul di pasar digital.</p>
+                <ul class="package-benefits">
+                    <li>Unlimited Halaman Website</li>
+                    <li>Desain Eksklusif</li>
+                    <li>Domain & Hosting 3 Tahun</li>
+                    <li>SEO Profesional</li>
+                    <li>Google & Social Media Ads</li>
+                </ul>
+                <!-- Mengarahkan ke login.php -->
+                <button class="price-button" onclick="window.location.href='request.php'">Rp 10.000.000</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Layanan Section -->
+<div class="container mt-4">
+    <h2 class="text-center">Cara Pemesanan</h2>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="list-group">
+                <div class="list-item mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="step-number me-3">1</div>
+                        <div>
+                            <h5 class="mb-1">Pilih Paket Website</h5>
+                            <p class="mb-0 text-justify">Pengguna dapat memilih paket website yang mereka inginkan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="step-number me-3">2</div>
+                        <div>
+                            <h5 class="mb-1">Formulir Pemesanan</h5>
+                            <p class="mb-0 text-justify">Setelah itu Pengguna akan diminta untuk mengisi formulir pendaftaran seperti data diri pengguna dan katagori website.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="step-number me-3">3</div>
+                        <div>
+                            <h5 class="mb-1">Pilih Metode Pembayaran</h5>
+                            <p class="mb-0 text-justify">Pengguna akan diminta memilih metode pembayaran yang tersedia dapat melalui M-banking, E-Wallet dan Debit/Kredit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="step-number me-3">4</div>
+                        <div>
+                            <h5 class="mb-1">Menghubungi Tim Kami</h5>
+                            <p class="mb-0 text-justify">Setelah pembayaran berhasil, Pemesan diwajibkan langsung menghubungi tim kami dengan nomer whatsapp yang tersedia untuk melakukan perancangan konsep UI/UX.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex align-items-center">
+                        <div class="step-number me-3">5</div>
+                        <div>
+                            <h5 class="mb-1">Revisi Website</h5>
+                            <p class="mb-0 text-justify">Pengguna dapat mengajukan revisi sebanyak 3 kali, namun jika dirasa desain masih kurang memuaskan maka pengguna akan mendapatkan charge/biaya tambahan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

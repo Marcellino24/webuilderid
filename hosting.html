@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WEBUILDER ID - Jasa Pembuatan Website untuk UMKM dan Perusahaan">
+    <title>Paket UMKM - WEBUILDER ID</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, rgb(255, 153, 0), rgb(206, 82, 255), rgb(16, 190, 0));
+            background-size: 400% 400%;
+            animation: gradientFade 10s infinite alternate ease-in-out;
+            color: white;
+            padding-top: 20px;
+        }
+
+        @keyframes gradientFade {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 70px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .package-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .package-description {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .package-benefits {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .package-benefits li {
+            margin-bottom: 5px;
+        }
+
+        .price-button {
+            background: linear-gradient(90deg, #FFA500, #9B30FF);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .price-button:hover {
+            background: linear-gradient(90deg, #FF4500, #6A0DAD);
+            color: black;
+        }
+
+        .row > div {
+            display: flex;
+        }
+
+        /* Back button styles */
+        .back-button {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .back-button span {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+
+        .back-button:hover {
+            color: #FFA500;
+        }
+
+        .step-number {
+        background: linear-gradient(135deg, #6A11CB, #2575FC);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .list-item {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+    }
+
+    .list-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .list-item h5 {
+        color: #FFF;
+    }
+
+    .list-item p {
+        color: #DDD;
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-button" onclick="goBack()">
+    <span>&lt;</span> Back
+</button>
+
+<!-- Hosting Section -->
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Pilih Paket Hosting Anda</h2>
+    <div class="row g-4">
+        <!-- Hosting .com -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Bronze</h3>
+                <p class="package-description">Rp 30.000/Bulan</p>
+                <ul class="package-benefits">
+                    <li>Space: 1000 MB</li>
+                    <li>Bandwidth: 25GB</li>
+                    <li>Free SSL Certificate</li>
+                </ul>
+                <button class="price-button" onclick="window.location.href='login.php'">Order</button>
+            </div>
+        </div>
+
+        <!-- Hosting .ID -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Silver</h3>
+                <p class="package-description">Rp 50.000/Bulan</p>
+                <ul class="package-benefits">
+                    <li>Space: 2000 MB</li>
+                    <li>Bandwidth: 40GB</li>
+                    <li>Free SSL Certificate</li>
+                </ul>
+                <button class="price-button" onclick="window.location.href='login.php'">Order</button>
+            </div>
+        </div>
+
+        <!-- Hosting .ORG -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Gold</h3>
+                <p class="package-description">Rp 80.000/Bulan</p>
+                <ul class="package-benefits">
+                    <li>Space: 4000 MB</li>
+                    <li>Bandwidth: 80GB</li>
+                    <li>Free SSL Certificate</li>
+                </ul>
+                <button class="price-button" onclick="window.location.href='login.php'">Order</button>
+            </div>
+        </div>
+
+        <!-- Hosting .NET -->
+        <div class="col-md-3">
+            <div class="package-card">
+                <h3 class="package-title">Platinum</h3>
+                <p class="package-description">Rp 140.000/Bulan</p>
+                <ul class="package-benefits">
+                    <li>Space: 10000 MB</li>
+                    <li>Bandwidth: 200GB</li>
+                    <li>Free SSL Certificate</li>
+                </ul>
+                <button class="price-button" onclick="window.location.href='login.php'">Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Kenapa Harus Hosting di WebuilderID Section -->
+<div class="container mt-5">
+    <h2 class="text-center">Kenapa Harus Hosting di WebuilderID?</h2>
+    <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Teks -->
+        <div style="flex: 1; padding-right: 20px;">
+            <p style="text-align: justify;">
+                WebuilderID adalah mitra digital terpercaya yang menyediakan layanan hosting premium untuk mendukung bisnis Anda berkembang di era digital. Kami memahami bahwa setiap bisnis memiliki kebutuhan unik, itulah sebabnya kami menawarkan solusi hosting yang fleksibel, andal, dan aman. Dengan pengalaman bertahun-tahun dalam industri teknologi, kami telah membangun reputasi sebagai penyedia layanan yang inovatif dan berorientasi pada hasil.
+            </p>
+            <p style="text-align: justify;">
+                Hosting di WebuilderID berarti mendapatkan lebih dari sekadar ruang untuk menyimpan website Anda. Kami memberikan infrastruktur yang cepat, stabil, dan selalu up-to-date dengan teknologi terkini. Dengan pusat data yang andal dan dukungan teknis yang tersedia 24/7, kami memastikan website Anda dapat diakses kapan saja, di mana saja, tanpa gangguan.
+            </p>
+            <p style="text-align: justify;">
+                Apa yang membuat kami berbeda? Kami tidak hanya menawarkan layanan hosting, tetapi juga layanan tambahan seperti integrasi sistem, optimasi performa website, dan keamanan tingkat tinggi untuk melindungi data Anda dari ancaman cyber. Tim ahli kami selalu siap membantu Anda, mulai dari proses migrasi hingga pengelolaan website, sehingga Anda dapat fokus menjalankan bisnis tanpa harus khawatir tentang hal-hal teknis.
+            </p>
+            <p style="text-align: justify;">
+                Kami di WebuilderID juga memahami pentingnya efisiensi biaya, terutama untuk UMKM yang sedang bertumbuh. Oleh karena itu, kami menawarkan berbagai paket hosting yang terjangkau namun tetap berkualitas tinggi. Dengan fleksibilitas pilihan ini, Anda dapat memilih paket yang sesuai dengan kebutuhan bisnis Anda, baik untuk website sederhana maupun platform dengan trafik tinggi.
+            </p>
+            <p style="text-align: justify;">
+                Lebih dari sekadar hosting, kami adalah mitra yang peduli dengan kesuksesan Anda. Kepercayaan Anda adalah prioritas utama kami, dan kami berkomitmen untuk terus memberikan layanan terbaik agar bisnis Anda dapat berkembang pesat di dunia digital. Jadi, percayakan kebutuhan hosting Anda pada WebuilderID, dan nikmati perjalanan digital yang lebih mudah, aman, dan sukses bersama kami.
+            </p>
+        </div>
+        <!-- Gambar -->
+        <div style="flex: 0 0 300px; max-width: 300px;">
+            <img src="foto/Hosting.png" alt="Hosting WebuilderID" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
